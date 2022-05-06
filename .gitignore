@@ -9,6 +9,7 @@ __pycache__/
 #all csvs & excel
 *.csv
 *.xlsx
+*.zip
 #Keys
 _keys.py
 
