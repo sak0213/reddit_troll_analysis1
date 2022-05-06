@@ -1,0 +1,11 @@
+1.  Make a database pipeline from reddit to my local PC
+2. Find a way to pipe DB data back to my ML script
+3. Write SQL to transform and clean data to make ML ready (author data priority)
+     -Iron out author data points: PPD, Post volume per subreddit, PPD per subreddit, publisher diversity, publisher diversity by subreddit?, subreddit combinations?
+     -Is it possible to run ML on title content? Like, ML based on common engrams (this might be too biased)
+4. Run and Tune ML - while prioritising a way to confirm class predictions
+5. Run NP engrams on ML classes
+
+Clean repo and Post to github
+Automate and fincify all this in AWS with chris's help
+6. Pipe findings into JS vizualisations & build app

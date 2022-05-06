@@ -1,0 +1,30 @@
+1. DB all posts in interested subreddits
+     -What subs do i care about? popular, niche, politics?
+     -Probs wanna DB all the subreddits pulled from this cuz why not
+2. DB all comments in interested posts
+     -pushift will get all comments, but how important are the votes (praw)
+3. DB all users in the content above (praw)
+
+DBS:
+-subs (sub ID*) --- run query to isolate all unique subs in the posts DB then add new ones
+-posts (post ID*, user ID, sub ID) - insert straight from POSTS api pull from pushift
+-comments (post ID, User ID, comment ID*) - gotta see how this endpoint works
+-users (user ID*) - insert data from unique users found in posts DB from PRAW
+
+
+4. Develop a full profile DB on each user, combining all the elements above
+     -what does this even look like? user: {entry ID, entry type [post, comment], subreddit, text, day/time}
+5. Store bad actors with full profile DB
+     -prolly use the PRAW api to pull all posts and comments
+     -transform this info into matching DBs like the above or place the data INTO thos DBs? Need to confirm params sent by PRAW
+6. Find an easy pipeline for logging all this profile info into tfID transofmration & vectorize content
+     -do i incorporate posting habits too?? idk what a vectorized output looks like, so we'll cross that bridge eventually
+7. Pipe this into a ML model
+8. Run ML model on all the data & test accuracy
+9. Analyze the results of bad actors and normies
+
+Future:
+10. make a pipeline to automate all the above and constantly retrain/relearn with the ML?
+11. auto-updating UI that lets you explore subreddits with/without bad actors
+12. publish to a public server
+13. profit
